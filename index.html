@@ -139,7 +139,7 @@ function update(){
   for(const e of enemies) e.y += e.speed;
 
   for(const e of enemies){
-    if(e.lane===playerLane && e.y+44>=playerY-40 && e.y-44<=playerY+40){
+    if(e.lane===playerLane && e.y+44>=playerY-40 && e.y-44<=playerY+20){
       spawnParticles(getLaneX(playerLane), playerY);
       gameRunning = false;
       setTimeout(showGameOver, 700);
